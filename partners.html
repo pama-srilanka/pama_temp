@@ -31,6 +31,62 @@
             font-weight: 600;
             color: var(--accent-color);
         }
+
+        .account-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .account-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-glow);
+        }
+
+        .account-owner {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            display: block;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 10px;
+        }
+
+        .account-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .bank-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .bank-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .acc-number {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .branch-info {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
@@ -154,15 +210,37 @@
                 <h3 class="sinhala-text" style="text-align: center; margin-bottom: 20px;">සම්බන්ධ වීමට සහ දායකත්වය සඳහා
                 </h3>
 
-                <p class="sinhala-text" style="text-align: center; font-size: 0.95rem;">
-                    බැරකිරීම් සඳහා පහත බැංකු ගිණුම් පමණක් භාවිතා කරන්න:
-                </p>
-                <ul class="account-list">
-                    <li>Sampath</li>
-                    <li>NTB</li>
-                    <li>HNB</li>
-                    <li>Commercial</li>
-                </ul>
+                <div class="account-card">
+                    <span class="account-owner">Chamara C.Perera</span>
+                    <div class="account-grid">
+                        <div class="bank-details">
+                            <span class="bank-label">Nations Trust Bank</span>
+                            <span class="acc-number">200930022275</span>
+                            <span class="branch-info">Kandy</span>
+                        </div>
+                        <div class="bank-details">
+                            <span class="bank-label">Sampath Bank</span>
+                            <span class="acc-number">1071 5371 7483</span>
+                            <span class="branch-info">Nittambuwa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="account-card">
+                    <span class="account-owner">W.A.G.K.Weerasooriya</span>
+                    <div class="account-grid">
+                        <div class="bank-details">
+                            <span class="bank-label">HNB</span>
+                            <span class="acc-number">224020149428</span>
+                            <span class="branch-info">Kurunegala</span>
+                        </div>
+                        <div class="bank-details">
+                            <span class="bank-label">Commercial Bank</span>
+                            <span class="acc-number">8009841259</span>
+                            <span class="branch-info">Warakapola</span>
+                        </div>
+                    </div>
+                </div>
 
                 <p class="sinhala-text subtle" style="text-align: center; margin-bottom: 20px;">
                     ඔබ යොදවන මුදල්, නැවත ඔබට/ඔබේ දරුවාට ලැබෙනු ඇත.
