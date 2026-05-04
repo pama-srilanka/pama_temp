@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+Sinhala:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-color: #050810;
+    --surface-color: rgba(30, 41, 59, 0.7);
+    --accent-color: #d4af37;
+    --accent-glow: rgba(212, 175, 55, 0.3);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --danger: #ef4444;
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans Sinhala', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header & Branding */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.2));
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Glass Cards */
+.card {
+    background: var(--surface-color);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.notice-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--danger);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Typography Helpers */
+.sinhala-text {
+    font-family: 'Noto Sans Sinhala', sans-serif;
+    font-size: 1.1rem;
+}
+
+.highlight {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.subtle {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: #000;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px var(--accent-glow);
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+/* Table Design */
+.table-container {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid var(--glass-border);
+    margin-top: 60px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .card {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
